@@ -1,8 +1,8 @@
 const boxes = document.querySelectorAll(".box")
-const images = document.querySelector(".image")
+const image = document.querySelector(".image")
 
-images.addEventListener("dragstart", dragStart);
-images.addEventListener("dragend", dragEnd);
+image.addEventListener("dragstart", dragStart);
+image.addEventListener("dragend", dragEnd);
 
 for(const box of boxes){
     box.addEventListener('dragover', dragOver);
@@ -36,5 +36,5 @@ function dragLeave(){
 
 function dragDrop(){
     this.className = 'box'
-    this.append(images)
+    this.append(image)
 }
